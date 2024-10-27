@@ -1,17 +1,21 @@
-import fs from "fs";
-import OpenAI from "openai";
-import dotenv from "dotenv";
-
+const fs = require('fs');
+const OpenAI = require('openai');
+const dotenv = require('dotenv');
 dotenv.config({ path: '.env.local' });
+
 const openai = new OpenAI( { apiKey: process.env.NEXT_PUBLIC_API_KEY } );
 
-async function main() {
+async function transcribeAudio(filePath) {
   const transcription = await openai.audio.transcriptions.create({
-    file: fs.createReadStream("./audio/combiende.mp3"),
+    file: fs.createReadStream(filePath),
     model: "whisper-1",
   });
 
   console.log(transcription.text);
+
+  return transcription.text;
 }
-main();
+
+module.exports = { transcribeAudio };
+
 
