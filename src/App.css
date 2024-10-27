@@ -1,38 +1,65 @@
-.App {
+.client{
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, rgb(117, 51, 179), rgb(126, 36, 109));
+  border: 1px solid black;
+  height:600px;
+  width:45%;
+  margin-left:80px;
+  border-radius: 25px;
+  
+}
+
+.text_to_customer{
+  background-color: white;
+  padding: 10px;
+  font-size: small;
+  width:75%;
+  margin-left: 32px;
+  border-radius: 10px;
+}
+.dropdown-toggle{
+  width:75%;
+  margin-left: 35px;
+  height:50px;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: rgb(206, 142, 217);
+}
+
+.dropdown-content{
+  background-color: azure;
+  padding:10px;
+  font-size:small;
+  width:75%;
+  margin-left: 32px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.footer{
+  position:absolute;
+  text-align: center;
+  margin-top: 500px;
+  
+  margin-left: 130px;
+  
+}
+.send{
+  
+  height:45px;
+  width:80px;
+  border-radius: 10px;
+  background-color: rgb(206, 142, 217)
+}
+.name{
+  color:white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.email{
+  color:white;
+  margin-top: -20px;
+  text-align: center;
 }
